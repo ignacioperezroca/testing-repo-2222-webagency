@@ -9,5 +9,6 @@ Abrí `index.html` en el navegador.
 ## Personalización rápida
 
 - Cambiar el número de WhatsApp buscando `5491158077847` en `index.html`.
+- Cambiar el email buscando `ignacio.perezroca@gmail.com` en `index.html`.
 - Ajustar textos, precios y casos desde `index.html`.
 - Ajustar colores y espaciado desde `styles.css`.
