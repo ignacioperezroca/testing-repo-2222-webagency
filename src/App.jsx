@@ -1,4 +1,6 @@
 import { useMemo, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -855,12 +857,12 @@ export default function App() {
                   <h2 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
                     Tu proxima web puede verse mucho mejor y empezar a trabajar a favor del negocio.
                   </h2>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
+                  <p className="mt-7 max-w-2xl pr-0 text-lg leading-8 text-white/70 md:pr-8">
                     Si hoy tu sitio no transmite valor, no ordena la propuesta o no genera conversaciones, probablemente ya te este costando oportunidades.
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <div className="flex flex-col gap-3 pt-2 sm:flex-row lg:flex-col lg:pt-6">
                   <motion.a
                     whileHover={reduceMotion ? undefined : { y: -2 }}
                     whileTap={reduceMotion ? undefined : { scale: 0.985 }}
@@ -897,6 +899,8 @@ export default function App() {
           </a>
         </div>
       </footer>
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
