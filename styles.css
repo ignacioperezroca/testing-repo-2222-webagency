@@ -568,6 +568,10 @@ h1 span,
   max-width: 720px;
 }
 
+.cta-copy {
+  padding-inline: clamp(0px, 2vw, 20px);
+}
+
 .cta .eyebrow {
   display: none;
 }
@@ -578,6 +582,11 @@ h1 span,
 
 .cta p:not(.eyebrow) {
   color: rgba(255, 255, 255, 0.72);
+  margin-top: 18px;
+}
+
+.cta-actions {
+  margin-top: 34px;
 }
 
 .cta .button-secondary {
@@ -678,5 +687,9 @@ h1 span,
   .cta {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .cta-copy {
+    padding-inline: 8px;
   }
 }
