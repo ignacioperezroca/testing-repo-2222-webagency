@@ -462,7 +462,7 @@ export default function App() {
                   whileHover={reduceMotion ? undefined : { y: -2 }}
                   whileTap={reduceMotion ? undefined : { scale: 0.985 }}
                   href="#pricing"
-                  className="group inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(15,23,42,0.18)] transition duration-300 hover:bg-slate-900"
+                  className="group inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_60px_rgba(16,185,129,0.22)] transition duration-300 hover:bg-emerald-400"
                 >
                   Ver planes
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -812,7 +812,7 @@ export default function App() {
                     className={cn(
                       "group mt-8 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold transition duration-300",
                       plan.featured
-                        ? "bg-slate-950 text-white shadow-[0_20px_50px_rgba(15,23,42,0.16)] hover:bg-slate-900"
+                        ? "bg-emerald-500 text-white shadow-[0_20px_50px_rgba(16,185,129,0.24)] hover:bg-emerald-400"
                         : "border border-slate-200 bg-white text-slate-950 hover:border-slate-300 hover:bg-slate-50"
                     )}
                   >
