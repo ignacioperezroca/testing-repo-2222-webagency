@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F6F3EC" />
+  <meta name="description" content="Fiel — Paseadores verificados para cuidar a tu perro con más confianza." />
+  <title>Fiel — Paseadores verificados</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-banner">MVP DEMO · perfiles y reservas simuladas</div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Fiel inicio"><span class="brand-mark">F</span><span>fiel</span></a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <button class="nav-link" data-scroll="explorar">Explorar</button>
+      <button class="nav-link" data-scroll="trust">Cómo verificamos</button>
+      <button class="nav-link" id="openWalkerOnboarding">Soy paseador</button>
+    </nav>
+    <button class="pill secondary" id="openLogin">Ingresar</button>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> Paseadores verificados en Buenos Aires</div>
+        <h1>Sabé quién entra a tu casa.<br><em>Y quién cuida a tu perro.</em></h1>
+        <p class="hero-sub">Perfiles con identidad verificada, referencias reales y reputación visible. Elegís con más contexto antes de abrir la puerta.</p>
+        <div class="search-panel" role="search">
+          <label><span>Zona</span><div class="input-like"><span class="icon">⌖</span><input id="zoneInput" value="Palermo, CABA" aria-label="Zona" /></div></label>
+          <label><span>Cuándo</span><div class="input-like"><span class="icon">◷</span><select id="whenSelect" aria-label="Cuándo"><option>Hoy</option><option>Mañana</option><option>Esta semana</option></select></div></label>
+          <button class="pill primary search-cta" id="searchBtn">Buscar paseador</button>
+        </div>
+        <div class="micro-proof">
+          <span><b>✓</b> Identidad verificada</span>
+          <span><b>✓</b> Reviews de paseos</span>
+          <span><b>✓</b> Encuentro previo</span>
+        </div>
+      </div>
+
+      <div class="hero-trust-card" aria-label="Ejemplo de perfil verificado">
+        <div class="card-topline"><span class="status-dot"></span> DISPONIBLE HOY</div>
+        <div class="walker-head">
+          <div class="avatar avatar-martina">MR</div>
+          <div><h3>Martina R.</h3><p>Palermo · 1,2 km</p></div>
+          <div class="rating"><b>4,98</b><span>★</span></div>
+        </div>
+        <div class="trust-badge"><span class="shield">✓</span><div><strong>Perfil Fiel verificado</strong><small>4 de 4 controles completos</small></div></div>
+        <div class="checks-grid">
+          <span>Documento <b>✓</b></span><span>Selfie <b>✓</b></span><span>Teléfono <b>✓</b></span><span>Referencias <b>✓</b></span>
+        </div>
+        <div class="activity-row"><div><b>126</b><span>paseos</span></div><div><b>41</b><span>clientes</span></div><div><b>78%</b><span>repiten</span></div></div>
+        <button class="pill primary full" data-profile="martina">Ver perfil completo</button>
+        <p class="privacy-note">Fiel verifica los datos privados. No mostramos DNI ni domicilio particular.</p>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="shell trust-strip-inner">
+        <div><span class="big-num">01</span><p><b>Verificamos identidad</b><br><small>Documento + selfie, sin publicar el documento.</small></p></div>
+        <div><span class="big-num">02</span><p><b>Validamos referencias</b><br><small>Personas reales contactadas por Fiel.</small></p></div>
+        <div><span class="big-num">03</span><p><b>Mostramos historial</b><br><small>Paseos, repetición y reviews verificadas.</small></p></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="explorar">
+      <div class="section-head">
+        <div><div class="eyebrow">CERCA TUYO</div><h2>Paseadores en Palermo</h2><p>Ordenados por disponibilidad, confianza e historial de actividad.</p></div>
+        <button class="pill secondary" id="toggleMap">Ver mapa</button>
+      </div>
+      <div class="filters" role="group" aria-label="Filtros de paseadores">
+        <button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="today">Disponible hoy</button><button class="filter" data-filter="verified">Verificación completa</button><button class="filter" data-filter="solo">Paseo individual</button>
+      </div>
+      <div class="map-panel hidden" id="mapPanel" aria-label="Mapa ilustrativo de paseadores">
+        <div class="map-grid"></div><div class="you-pin">Vos</div>
+        <button class="map-pin pin-1" data-profile="martina"><span>MR</span><b>$8.500</b></button><button class="map-pin pin-2" data-profile="nicolas"><span>NA</span><b>$7.800</b></button><button class="map-pin pin-3" data-profile="sofia"><span>SG</span><b>$9.200</b></button>
+        <div class="map-caption">Mapa conceptual · ubicaciones aproximadas del demo</div>
+      </div>
+      <div class="walker-grid" id="walkerGrid"></div>
+    </section>
+
+    <section class="section trust-section" id="trust">
+      <div class="shell trust-layout">
+        <div class="trust-copy">
+          <div class="eyebrow">CONFIANZA, SIN SOBREEXPONER DATOS</div><h2>No necesitás ver un DNI.<br>Necesitás saber que alguien lo verificó bien.</h2>
+          <p>La información sensible queda detrás de la plataforma. Vos ves el resultado de cada verificación y el historial que realmente ayuda a decidir.</p><div class="principle">“Verificar en privado. Explicar en público.”</div>
+        </div>
+        <div class="verification-stack">
+          <article><div class="v-icon">ID</div><div><h3>Identidad</h3><p>Documento oficial + selfie de presencia. Mostramos solo nombre de pila, inicial y estado de verificación.</p></div><span>Requerido</span></article>
+          <article><div class="v-icon">↗</div><div><h3>Referencias</h3><p>Fiel contacta al menos dos referencias y registra cuándo fueron validadas.</p></div><span>Requerido</span></article>
+          <article><div class="v-icon">★</div><div><h3>Reputación</h3><p>Reviews vinculadas a servicios realizados, tasa de repetición y antigüedad.</p></div><span>Dinámico</span></article>
+          <article><div class="v-icon">⌁</div><div><h3>Presencia durante el paseo</h3><p>Check-in, ubicación compartida y cierre con foto para reducir sustitución de identidad.</p></div><span>Siguiente fase</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="section-head compact"><div><div class="eyebrow">CÓMO FUNCIONA</div><h2>De desconocido a persona de confianza</h2></div></div>
+      <div class="journey-grid">
+        <article><span>1</span><h3>Explorá</h3><p>Compará experiencia, precio, zonas, reviews y verificaciones.</p></article>
+        <article><span>2</span><h3>Conocelo antes</h3><p>Pedí un Meet & Greet breve para conocer al paseador y a tu perro juntos.</p></article>
+        <article><span>3</span><h3>Reservá</h3><p>Definí horario, duración, instrucciones y modalidad de acceso.</p></article>
+        <article><span>4</span><h3>Seguí el paseo</h3><p>Recibí check-in, recorrido y cierre. Esta función está prototipada para la próxima fase.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-band"><div class="shell cta-inner"><div><div class="eyebrow light">PARA PASEADORES</div><h2>Tu reputación también<br>merece ser visible.</h2><p>Creá un perfil verificable para convertir confianza informal en una ventaja profesional.</p></div><button class="pill light-cta" id="openWalkerOnboarding2">Crear mi perfil</button></div></section>
+  </main>
+
+  <footer><div class="shell footer-inner"><div class="brand brand-footer"><span class="brand-mark">F</span><span>fiel</span></div><p>MVP conceptual · Buenos Aires, 2026</p><p>Privacidad por diseño · perfiles ficticios</p></div></footer>
+
+  <nav class="mobile-nav" aria-label="Navegación móvil"><button data-scroll="top"><span>⌂</span>Inicio</button><button data-scroll="explorar"><span>⌕</span>Explorar</button><button data-scroll="trust"><span>✓</span>Verificar</button><button id="openWalkerOnboardingMobile"><span>＋</span>Perfil</button></nav>
+
+  <dialog id="profileDialog" class="sheet-dialog"><button class="dialog-close" data-close="profileDialog" aria-label="Cerrar">×</button><div id="profileContent"></div></dialog>
+  <dialog id="bookingDialog" class="sheet-dialog small-dialog"><button class="dialog-close" data-close="bookingDialog" aria-label="Cerrar">×</button><div class="booking-wrap"><div class="eyebrow">SOLICITAR PASEO</div><h2 id="bookingTitle">Reservar</h2><p class="muted">Completá la solicitud. No se cobra nada en este MVP demo.</p><form id="bookingForm"><div class="form-row"><label>Tu perro<input required value="Lupe" /></label><label>Duración<select required><option>30 min</option><option selected>60 min</option><option>90 min</option></select></label></div><div class="form-row"><label>Fecha<input type="date" id="bookingDate" required /></label><label>Horario<select required><option>09:00</option><option>11:00</option><option selected>14:00</option><option>17:00</option><option>19:00</option></select></label></div><label>Acceso al edificio<select><option>Te espero en la puerta</option><option>Llave en portería</option><option>El paseador tiene acceso autorizado</option></select></label><label>Notas<textarea placeholder="Rutina, comportamiento, medicación, preferencias..."></textarea></label><button class="pill primary full" type="submit">Enviar solicitud</button></form></div></dialog>
+  <dialog id="successDialog" class="center-dialog"><div class="success-icon">✓</div><h2>Solicitud enviada</h2><p>En un producto real, el paseador tendría que aceptar antes de confirmar la reserva.</p><button class="pill primary" data-close="successDialog">Listo</button></dialog>
+  <dialog id="walkerDialog" class="sheet-dialog onboarding-dialog"><button class="dialog-close" data-close="walkerDialog" aria-label="Cerrar">×</button><div class="onboarding-layout"><aside><div class="brand"><span class="brand-mark">F</span><span>fiel</span></div><p>Perfil de paseador</p><ol id="stepList"><li class="active">Identidad</li><li>Experiencia</li><li>Referencias</li><li>Servicio</li><li>Vista previa</li></ol></aside><section class="onboarding-main" id="onboardingMain"></section></div></dialog>
+  <dialog id="loginDialog" class="center-dialog login-dialog"><button class="dialog-close" data-close="loginDialog" aria-label="Cerrar">×</button><div class="brand centered"><span class="brand-mark">F</span><span>fiel</span></div><h2>Ingresar</h2><p class="muted">En este MVP el acceso todavía no está conectado a autenticación real.</p><label>Email<input type="email" placeholder="vos@email.com" /></label><button class="pill primary full" data-close="loginDialog">Continuar demo</button></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
